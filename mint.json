@@ -29,17 +29,41 @@
   ],
   "navigation": [
     {
-      "group": "API Documentation",
+      "group": "About",
       "pages": [
         "api-reference/introduction"
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Project endpoints",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "api-reference/project/project",
+        "api-reference/project/readme",
+        "api-reference/project/sleep"
+      ]
+    },
+    {
+      "group": "User endpoints",
+      "pages": [
+        "api-reference/user/search",
+        "api-reference/user/by-id",
+        "api-reference/user/by-username"
+      ]
+    },
+    {
+      "group": "Collection endpoints",
+      "pages": [
+        "api-reference/collection/get"
+      ]
+    },
+    {
+      "group": "Editor endpoints",
+      "pages": [
+        "api-reference/editor/about",
+        "api-reference/editor/logs",
+        "api-reference/editor/terminal",
+        "api-reference/editor/add-domain",
+        "api-reference/editor/list-domain"
       ]
     }
   ],
