@@ -153,40 +153,6 @@
         }
       }
     },
-    "/{project}/console/{persistent_token}": {
-      "get": {
-        "operationId": "getProjectTerminal",
-        "summary": "Get the terminal for a project",
-        "parameters": [
-          {
-            "name": "project",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "persistent_token",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Project terminal"
-          }
-        },
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      }
-    },
     "/v1/projects/{project_id}/domains": {
       "post": {
         "operationId": "addCustomDomain",
