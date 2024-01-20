@@ -18,13 +18,13 @@
   "anchors": [
     {
       "name": "Glitch",
-      "icon": "browser",
+      "icon": "book-open-cover",
       "url": "https://glitch.com"
     },
     {
       "name": "Community",
       "icon": "discourse",
-      "url": "https://mintlify.com/community"
+      "url": "https://support.glitch.com/"
     }
   ],
   "navigation": [
