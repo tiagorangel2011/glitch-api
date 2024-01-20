@@ -1,33 +1,27 @@
 ---
 title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+description: 'Information about this API'
 ---
 
 <Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
+  This API is unofficial, and not made by Glitch.
 </Note>
 
-## Welcome
+## About
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+This is an unofficial documentation for the Glitch API: the API Glitch uses to do a ton of stuff on their frontend, e.g. read a project's information, search for users, etc.
 
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
+Credit to [glitchapi.js.org](https://glitchapi.js.org/docs/) for some of the endpoints.
 
 ## Authentication
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+Most of the endpoints need to be authenticated using a persistent token in the `Authorization` header.
 
-```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
+To get it, go to [Glitch](https://glitch.com), open the devtools console (press `CTRL+SHIFT+I`, you might need to type `allow pasting`) and run this code:
+
+```javascript
+prompt("Token:", JSON.parse(localStorage.cachedUser).persistentToken)
+```
+
+This will show open a window with your per
 ```
