@@ -59,7 +59,6 @@
     {
       "group": "Editor endpoints",
       "pages": [
-        "api-reference/editor/about",
         "api-reference/editor/logs",
         "api-reference/editor/terminal",
         "api-reference/editor/add-domain",
