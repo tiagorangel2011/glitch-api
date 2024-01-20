@@ -1,32 +1,15 @@
-# Mintlify Starter Kit
+<div align="center">
+<img src="/images/hero.svg" width="600px">
 
-Click on `Use this template` to copy the Mintlify starter kit. The starter kit contains examples including
 
-- Guide pages
-- Navigation
-- Customizations
-- API Reference pages
-- Use of popular components
+# Unofficial Glitch API
 
-### Development
+</div>
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mintlify) to preview the documentation changes locally. To install, use the following command
+This is an unofficial documentation for the Glitch API: the API Glitch uses to do a ton of stuff on their frontend, e.g. read a project's information, search for users, etc.
 
-```
-npm i -g mintlify
-```
+Credit to https://glitchapi.js.org
 
-Run the following command at the root of your documentation (where mint.json is)
-
-```
-mintlify dev
-```
-
-### Publishing Changes
-
-Install our Github App to autopropagate changes from youre repo to your deployment. Changes will be deployed to production automatically after pushing to the default branch. Find the link to install on your dashboard. 
-
-#### Troubleshooting
-
-- Mintlify dev isn't running - Run `mintlify install` it'll re-install dependencies.
-- Page loads as a 404 - Make sure you are running in a folder with `mint.json`
+> [!NOTE]
+> Glitch is starting to rolling out [webhooks](https://support.glitch.com/t/community-test-glitch-thanked-webhook/65338) in the [community test website](https://preview.glitch.com/).
+> Once more webhooks are added, we recommend using them over this.
