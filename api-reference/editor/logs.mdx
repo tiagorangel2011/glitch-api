@@ -4,3 +4,25 @@ openapi: 'GET wss://api.glitch.com/{projectid}/logs'
 ---
 
 This endpoint controls the Glitch editor using WebSockets, so it might be a bit more difficult to understand. May change soon.
+
+To use this endpoint, open the following websocket:
+
+```
+wss://api.glitch.com/{projectid}/logs?authorization={persistent_token}
+```
+
+<Note>
+You must send a message with `keep alive` every few seconds, otherwise the connection will be closed.
+</Note>
+
+Logs should look like this:
+
+```json
+{
+   "process":"signal",
+   "timestamp":123456789,
+   "text":"xxxxxxxxxxxxx"
+}
+```
+
+To test this endpoint, we recommend you using something like Hoppscotch.

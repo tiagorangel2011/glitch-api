@@ -153,32 +153,6 @@
         }
       }
     },
-    "/{projectid}/logs": {
-      "get": {
-        "operationId": "getRealtimeLogsForProject",
-        "summary": "Get realtime logs for a project",
-        "parameters": [
-          {
-            "name": "projectid",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Realtime logs"
-          }
-        },
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      }
-    },
     "/{project}/console/{persistent_token}": {
       "get": {
         "operationId": "getProjectTerminal",
@@ -263,13 +237,13 @@
         ]
       }
     },
-    "/projects/{PROJECT_ID}/stop": {
+    "/projects/{project_id}/stop": {
       "post": {
         "operationId": "projectSleep",
         "summary": "Make a project sleep",
         "parameters": [
           {
-            "name": "PROJECT_ID",
+            "name": "project_id",
             "in": "path",
             "required": true,
             "schema": {
