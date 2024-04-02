@@ -79,7 +79,7 @@
         "api-reference/editor/remove-domain",
         "api-reference/editor/list-domain",
         "api-reference/editor/add-member",
-        "api-reference/editor/remove-member",
+        "api-reference/editor/remove-member"
       ]
     }
   ]
