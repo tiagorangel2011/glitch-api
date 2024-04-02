@@ -167,12 +167,11 @@
                         }
                     }
                 ],
-                "components": {
-                    "securitySchemes": {
-                        "ApiKeyAuth": {
-                            "type": "apiKey",
-                            "in": "header",
-                            "name": "Authorization"
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {}
                         }
                     }
                 },
@@ -183,7 +182,7 @@
                 },
                 "security": [
                     {
-                        "ApiKeyAuth": []
+                        "Authorization": []
                     }
                 ]
             },
@@ -200,15 +199,6 @@
                         }
                     }
                 ],
-                "components": {
-                    "securitySchemes": {
-                        "ApiKeyAuth": {
-                            "type": "apiKey",
-                            "in": "header",
-                            "name": "Authorization"
-                        }
-                    }
-                },
                 "responses": {
                     "200": {
                         "description": "List of custom domains"
@@ -216,7 +206,7 @@
                 },
                 "security": [
                     {
-                        "ApiKeyAuth": []
+                        "Authorization": []
                     }
                 ]
             }
@@ -235,15 +225,6 @@
                         }
                     }
                 ],
-                "components": {
-                    "securitySchemes": {
-                        "ApiKeyAuth": {
-                            "type": "apiKey",
-                            "in": "header",
-                            "name": "Authorization"
-                        }
-                    }
-                },
                 "responses": {
                     "200": {
                         "description": "Project put to sleep"
@@ -251,7 +232,7 @@
                 },
                 "security": [
                     {
-                        "ApiKeyAuth": []
+                        "Authorization": []
                     }
                 ]
             }
@@ -260,23 +241,28 @@
             "post": {
                 "operationId": "execCommand",
                 "summary": "Execute a command in the terminal",
+                "parameters": [
+                    {
+                        "name": "project_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
                 "requestBody": {
                     "required": true,
                     "content": {
                         "application/json": {
-                          "required": true,
-                          "example": {
-                            "command": "ls"
-                          }
-                        }
-                    }
-                 },
-                "components": {
-                    "securitySchemes": {
-                        "ApiKeyAuth": {
-                            "type": "apiKey",
-                            "in": "header",
-                            "name": "Authorization"
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "command": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
                         }
                     }
                 },
@@ -287,7 +273,7 @@
                 },
                 "security": [
                     {
-                        "ApiKeyAuth": []
+                        "Authorization": []
                     }
                 ]
             }
@@ -317,20 +303,11 @@
                         }
                     }
                 ],
-                 "requestBody": {
+                "requestBody": {
                     "required": true,
                     "content": {
                         "application/json": {
-                          "required": true
-                        }
-                    }
-                 },
-                "components": {
-                    "securitySchemes": {
-                        "ApiKeyAuth": {
-                            "type": "apiKey",
-                            "in": "header",
-                            "name": "Authorization"
+                            "schema": {}
                         }
                     }
                 },
@@ -341,7 +318,7 @@
                 },
                 "security": [
                     {
-                        "ApiKeyAuth": []
+                        "Authorization": []
                     }
                 ]
             }
@@ -349,9 +326,10 @@
     },
     "components": {
         "securitySchemes": {
-            "bearerAuth": {
+            "Authorization": {
                 "type": "http",
-                "scheme": "bearer"
+                "scheme": "bearer",
+                "bearerFormat": "string"
             }
         }
     }
