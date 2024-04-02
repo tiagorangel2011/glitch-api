@@ -289,6 +289,32 @@
                 }
             }
         },
+        "/v1/users/{user_id}/uptime": {
+            "get": {
+                "operationId": "getUptime",
+                "summary": "Get a user's uptime",
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Uptime information"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ]
+            }
+        },
         "/projects/{project_id}/setenv": {
             "post": {
                 "operationId": "setEnv",

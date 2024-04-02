@@ -51,7 +51,8 @@
         "api-reference/user/search",
         "api-reference/user/by-id",
         "api-reference/user/by-username",
-        "api-reference/user/anon"
+        "api-reference/user/anon",
+        "api-reference/user/hours"
       ]
     },
     {
