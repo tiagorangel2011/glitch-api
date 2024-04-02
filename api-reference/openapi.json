@@ -322,8 +322,37 @@
                     }
                 ]
             }
+        },
+        "/project/download/?authorization={persistent_token}&projectId={project_id}": {
+            "get": {
+                "operationId": "downloadProject",
+                "summary": "Download a project",
+                "parameters": [
+                    {
+                        "name": "project_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "persistent_token",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
         }
-    },
+            },
         "components": {
         "securitySchemes": {
             "ApiKeyAuth": {
