@@ -40,7 +40,9 @@
         "api-reference/project/project",
         "api-reference/project/readme",
         "api-reference/project/sleep",
-        "api-reference/project/exec"
+        "api-reference/project/exec",
+        "api-reference/project/setEnv",
+        "api-reference/project/download"
       ]
     },
     {
