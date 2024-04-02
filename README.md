@@ -10,7 +10,7 @@ This is an unofficial documentation for the Glitch API: the API Glitch uses to d
 
 This documentation's objective is to be the most detailed and with most endpoints of all Glitch API documentations. Made with Mintlify for nice UI and interactive widgets.
 
-Credit to https://glitchapi.js.org for some endpoints.
+Credit to https://glitchapi.js.org and SnailCLI for some endpoints.
 
 > [!NOTE]
 > Glitch is starting to rolling out [webhooks](https://support.glitch.com/t/community-test-glitch-thanked-webhook/65338) in the [community test website](https://preview.glitch.com/).
