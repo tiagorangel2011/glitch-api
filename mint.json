@@ -63,7 +63,8 @@
     {
       "group": "Collection endpoints",
       "pages": [
-        "api-reference/collection/get"
+        "api-reference/collection/get",
+        "api-reference/collection/new"
       ]
     },
     {
