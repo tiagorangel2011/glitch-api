@@ -42,7 +42,8 @@
         "api-reference/project/sleep",
         "api-reference/project/exec",
         "api-reference/project/setEnv",
-        "api-reference/project/download"
+        "api-reference/project/download",
+        "api-reference/project/remix"
       ]
     },
     {

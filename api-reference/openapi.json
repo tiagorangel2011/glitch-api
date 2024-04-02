@@ -349,6 +349,47 @@
                 ]
             }
         },
+        "/v1/projects/by/domain/{project_domain}/remix": {
+            "post": {
+                "operationId": "remix",
+                "summary": "Remix a project",
+                "parameters": [
+                    {
+                        "name": "project_domain",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "domain": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Project remixed"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ]
+            }
+        },
         "/project/download/?authorization={persistent_token}&projectId={project_id}": {
             "get": {
                 "operationId": "downloadProject",
