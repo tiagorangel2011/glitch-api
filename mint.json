@@ -72,7 +72,10 @@
         "api-reference/editor/logs",
         "api-reference/editor/terminal",
         "api-reference/editor/add-domain",
-        "api-reference/editor/list-domain"
+        "api-reference/editor/remove-domain",
+        "api-reference/editor/list-domain",
+        "api-reference/editor/add-member",
+        "api-reference/editor/remove-member",
       ]
     }
   ]
