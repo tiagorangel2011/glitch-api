@@ -169,7 +169,54 @@
                     "200": {
                         "description": "List of projects"
                     }
-                }
+                },
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "required": true
+                                    },
+                                    "description": {
+                                        "type": "string",
+                                        "required": true
+                                    },
+                                    "url": {
+                                        "type": "string",
+                                        "required": true
+                                    },
+                                    "avatarUrl": {
+                                        "type": "string",
+                                        "required": true
+                                    },
+                                    "coverColor": {
+                                        "type": "string",
+                                        "required": true
+                                    },
+                                    "teamId": {
+                                        "type": "string",
+                                        "default": null,
+                                        "required": false
+                                    },
+                                    "isMyStuff": {
+                                        "type": "string",
+                                        "default": false,
+                                        "required": false
+                                    },
+                                    "private": {
+                                        "type": "string",
+                                        "default": false,
+                                        "required": false
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
             }
         },
         "/v1/projects/{project_id}/domains": {
