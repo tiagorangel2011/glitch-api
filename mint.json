@@ -54,6 +54,8 @@
         "api-reference/user/search",
         "api-reference/user/by-id",
         "api-reference/user/by-username",
+        "api-reference/user/projects",
+        "api-reference/user/deletedProjects",
         "api-reference/user/anon",
         "api-reference/user/hours"
       ]
