@@ -217,6 +217,30 @@
                         "ApiKeyAuth": []
                     }
                 ]
+            },
+            "delete": {
+                "operationId": "deleteCustomDomains",
+                "summary": "Delete custom domains for a project",
+                "parameters": [
+                    {
+                        "name": "project_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Custom domains deleted"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ]
             }
         },
         "/projects/{project_id}/stop": {
@@ -398,22 +422,22 @@
                 ]
             }
         },
-        "/project/download/?authorization={persistent_token}&projectId={project_id}": {
+        "/project/download": {
             "get": {
                 "operationId": "downloadProject",
                 "summary": "Download a project",
                 "parameters": [
                     {
-                        "name": "project_id",
-                        "in": "path",
+                        "name": "authorization",
+                        "in": "query",
                         "required": true,
                         "schema": {
                             "type": "string"
                         }
                     },
                     {
-                        "name": "persistent_token",
-                        "in": "path",
+                        "name": "projectId",
+                        "in": "query",
                         "required": true,
                         "schema": {
                             "type": "string"
@@ -578,7 +602,88 @@
                     }
                 ]
             }
-        }
+        },
+        "/project_permissions/{project_id}": {
+            "post": {
+                "operationId": "addMember",
+                "summary": "Add a member to a project",
+                "parameters": [
+                    {
+                        "name": "project_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "userId": {
+                                        "type": "string"
+                                    },
+                                    "projectId": {
+                                        "type": "string"
+                                    },
+                                    "accessLevel": {
+                                        "type": "number"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Member added"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ]
+            }
+        },
+        "/v1/projects/{project_id}/users/${user_id}": {
+            "delete": {
+                "operationId": "removeMember",
+                "summary": "Remove a member from a project",
+                "parameters": [
+                    {
+                        "name": "project_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Member removed"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ]
+            }
+        },
     },
     "components": {
         "securitySchemes": {
