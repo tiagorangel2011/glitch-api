@@ -216,7 +216,7 @@
                             }
                         }
                     }
-                },
+                }
             }
         },
         "/v1/projects/{project_id}/domains": {
