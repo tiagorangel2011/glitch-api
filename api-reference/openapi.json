@@ -255,6 +255,41 @@
                     }
                 ]
             }
+        },
+        "/projects/{project_id}/exec": {
+            "post": {
+                "operationId": "execCommand",
+                "summary": "Execute a command in the terminal",
+                "parameters": [
+                    {
+                        "name": "command",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "components": {
+                    "securitySchemes": {
+                        "ApiKeyAuth": {
+                            "type": "apiKey",
+                            "in": "header",
+                            "name": "Authorization"
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Command executed"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ]
+            }
         }
     },
     "components": {
