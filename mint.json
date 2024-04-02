@@ -43,7 +43,9 @@
         "api-reference/project/exec",
         "api-reference/project/setEnv",
         "api-reference/project/download",
-        "api-reference/project/remix"
+        "api-reference/project/remix",
+        "api-reference/project/archive",
+        "api-reference/project/unarchive"
       ]
     },
     {

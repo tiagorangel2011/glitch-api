@@ -23,6 +23,14 @@
                         "schema": {
                             "type": "string"
                         }
+                    },
+                    {
+                        "name": "showDeleted",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "boolean"
+                        }
                     }
                 ],
                 "responses": {
@@ -417,6 +425,58 @@
                         "description": "OK"
                     }
                 }
+            }
+        },
+        "/v1/projects/{project_id}": {
+            "delete": {
+                "operationId": "archiveProject",
+                "summary": "Archive a project",
+                "parameters": [
+                    {
+                        "name": "project_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ]
+            }
+        },
+        "/v1/projects/{project_id}/undelete": {
+            "post": {
+                "operationId": "unarchiveProject",
+                "summary": "Unarchive a project",
+                "parameters": [
+                    {
+                        "name": "project_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ]
             }
         }
     },
