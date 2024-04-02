@@ -182,7 +182,7 @@
                 },
                 "security": [
                     {
-                        "Authorization": []
+                        "ApiKeyAuth": []
                     }
                 ]
             },
@@ -206,7 +206,7 @@
                 },
                 "security": [
                     {
-                        "Authorization": []
+                        "ApiKeyAuth": []
                     }
                 ]
             }
@@ -232,7 +232,7 @@
                 },
                 "security": [
                     {
-                        "Authorization": []
+                        "ApiKeyAuth": []
                     }
                 ]
             }
@@ -273,7 +273,7 @@
                 },
                 "security": [
                     {
-                        "Authorization": []
+                        "ApiKeyAuth": []
                     }
                 ]
             }
@@ -318,18 +318,18 @@
                 },
                 "security": [
                     {
-                        "Authorization": []
+                        "ApiKeyAuth": []
                     }
                 ]
             }
         }
     },
-    "components": {
+        "components": {
         "securitySchemes": {
-            "Authorization": {
-                "type": "http",
-                "scheme": "bearer",
-                "bearerFormat": "string"
+            "ApiKeyAuth": {
+                "type": "apiKey",
+      "in": "header",
+      "name": "Authorization"
             }
         }
     }
