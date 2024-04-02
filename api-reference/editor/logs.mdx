@@ -1,6 +1,7 @@
 ---
 title: 'Get logs'
 openapi: 'GET wss://api.glitch.com/{projectid}/logs'
+description: 'Listens for logs.'
 ---
 
 This endpoint controls the Glitch editor using WebSockets, so it might be a bit more difficult to understand. May change soon.
@@ -20,7 +21,7 @@ Logs should look like this:
 ```json
 {
    "process":"signal",
-   "timestamp":123456789,
+   "timestamp":0000000,
    "text":"xxxxxxxxxxxxx"
 }
 ```
