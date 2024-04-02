@@ -34,52 +34,52 @@
     {
       "group": "About",
       "pages": [
-        "api/introduction"
+        "docs/introduction"
       ]
     },
     {
       "group": "Project endpoints",
       "pages": [
-        "api/project/project",
-        "api/project/readme",
-        "api/project/sleep",
-        "api/project/exec",
-        "api/project/setEnv",
-        "api/project/download",
-        "api/project/remix",
-        "api/project/archive",
-        "api/project/unarchive"
+        "docs/project/project",
+        "docs/project/readme",
+        "docs/project/sleep",
+        "docs/project/exec",
+        "docs/project/setEnv",
+        "docs/project/download",
+        "docs/project/remix",
+        "docs/project/archive",
+        "docs/project/unarchive"
       ]
     },
     {
       "group": "User endpoints",
       "pages": [
-        "api/user/search",
-        "api/user/by-id",
-        "api/user/by-username",
-        "api/user/projects",
-        "api/user/deletedProjects",
-        "api/user/anon",
-        "api/user/hours"
+        "docs/user/search",
+        "docs/user/by-id",
+        "docs/user/by-username",
+        "docs/user/projects",
+        "docs/user/deletedProjects",
+        "docs/user/anon",
+        "docs/user/hours"
       ]
     },
     {
       "group": "Collection endpoints",
       "pages": [
-        "api/collection/get",
-        "api/collection/new"
+        "docs/collection/get",
+        "docs/collection/new"
       ]
     },
     {
       "group": "Editor endpoints",
       "pages": [
-        "api/editor/logs",
-        "api/editor/terminal",
-        "api/editor/add-domain",
-        "api/editor/remove-domain",
-        "api/editor/list-domain",
-        "api/editor/add-member",
-        "api/editor/remove-member"
+        "docs/editor/logs",
+        "docs/editor/terminal",
+        "docs/editor/add-domain",
+        "docs/editor/remove-domain",
+        "docs/editor/list-domain",
+        "docs/editor/add-member",
+        "docs/editor/remove-member"
       ]
     }
   ]
