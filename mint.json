@@ -39,7 +39,8 @@
       "pages": [
         "api-reference/project/project",
         "api-reference/project/readme",
-        "api-reference/project/sleep"
+        "api-reference/project/sleep",
+        "api-reference/project/exec"
       ]
     },
     {
@@ -47,7 +48,8 @@
       "pages": [
         "api-reference/user/search",
         "api-reference/user/by-id",
-        "api-reference/user/by-username"
+        "api-reference/user/by-username",
+        "api-reference/user/anon"
       ]
     },
     {

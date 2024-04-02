@@ -260,16 +260,17 @@
             "post": {
                 "operationId": "execCommand",
                 "summary": "Execute a command in the terminal",
-                "parameters": [
-                    {
-                        "name": "command",
-                        "in": "body",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                          "required": true,
+                          "example": {
+                            "command": "ls"
+                          }
                         }
                     }
-                ],
+                 },
                 "components": {
                     "securitySchemes": {
                         "ApiKeyAuth": {
@@ -282,6 +283,60 @@
                 "responses": {
                     "200": {
                         "description": "Command executed"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ]
+            }
+        },
+        "/v1/users/anon": {
+            "post": {
+                "operationId": "anonUser",
+                "summary": "Create new anonymous user",
+                "responses": {
+                    "200": {
+                        "description": "User object"
+                    }
+                }
+            }
+        },
+        "/projects/{project_id}/setenv": {
+            "post": {
+                "operationId": "setEnv",
+                "summary": "Set project .env",
+                "parameters": [
+                    {
+                        "name": "project_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                 "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                          "required": true
+                        }
+                    }
+                 },
+                "components": {
+                    "securitySchemes": {
+                        "ApiKeyAuth": {
+                            "type": "apiKey",
+                            "in": "header",
+                            "name": "Authorization"
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Env set"
                     }
                 },
                 "security": [
