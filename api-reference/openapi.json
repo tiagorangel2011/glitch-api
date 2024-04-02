@@ -352,13 +352,13 @@
                 }
             }
         }
-            },
-        "components": {
+    },
+    "components": {
         "securitySchemes": {
             "ApiKeyAuth": {
                 "type": "apiKey",
-      "in": "header",
-      "name": "Authorization"
+                "in": "header",
+                "name": "Authorization"
             }
         }
     }
