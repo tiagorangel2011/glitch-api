@@ -161,6 +161,17 @@
                 }
             }
         },
+        "/v1/collections": {
+            "post": {
+                "operationId": "newCollection",
+                "summary": "Create a new collection",
+                "responses": {
+                    "200": {
+                        "description": "List of projects"
+                    }
+                }
+            }
+        },
         "/v1/projects/{project_id}/domains": {
             "post": {
                 "operationId": "addCustomDomain",
@@ -521,7 +532,8 @@
                         "in": "query",
                         "required": true,
                         "schema": {
-                            "type": "number"
+                            "type": "number",
+                            "default": 100
                         }
                     },
                     {
@@ -529,7 +541,8 @@
                         "in": "query",
                         "required": true,
                         "schema": {
-                            "type": "string"
+                            "type": "string",
+                            "default": "createdAt"
                         }
                     },
                     {
@@ -537,7 +550,8 @@
                         "in": "query",
                         "required": true,
                         "schema": {
-                            "type": "string"
+                            "type": "string",
+                            "default": "ASC"
                         }
                     }
                 ],
@@ -571,7 +585,8 @@
                         "in": "query",
                         "required": true,
                         "schema": {
-                            "type": "number"
+                            "type": "number",
+                            "default": 100
                         }
                     },
                     {
@@ -579,7 +594,8 @@
                         "in": "query",
                         "required": true,
                         "schema": {
-                            "type": "string"
+                            "type": "string",
+                            "default": "createdAt"
                         }
                     },
                     {
@@ -587,7 +603,8 @@
                         "in": "query",
                         "required": true,
                         "schema": {
-                            "type": "string"
+                            "type": "string",
+                            "default": "ASC"
                         }
                     }
                 ],
