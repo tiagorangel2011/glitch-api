@@ -2,8 +2,8 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Glitch API",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/images/logo/dark.svg",
+    "light": "/images/logo/light.svg"
   },
   "favicon": "/favicon.svg",
   "colors": {
@@ -34,52 +34,52 @@
     {
       "group": "About",
       "pages": [
-        "api-reference/introduction"
+        "api/introduction"
       ]
     },
     {
       "group": "Project endpoints",
       "pages": [
-        "api-reference/project/project",
-        "api-reference/project/readme",
-        "api-reference/project/sleep",
-        "api-reference/project/exec",
-        "api-reference/project/setEnv",
-        "api-reference/project/download",
-        "api-reference/project/remix",
-        "api-reference/project/archive",
-        "api-reference/project/unarchive"
+        "api/project/project",
+        "api/project/readme",
+        "api/project/sleep",
+        "api/project/exec",
+        "api/project/setEnv",
+        "api/project/download",
+        "api/project/remix",
+        "api/project/archive",
+        "api/project/unarchive"
       ]
     },
     {
       "group": "User endpoints",
       "pages": [
-        "api-reference/user/search",
-        "api-reference/user/by-id",
-        "api-reference/user/by-username",
-        "api-reference/user/projects",
-        "api-reference/user/deletedProjects",
-        "api-reference/user/anon",
-        "api-reference/user/hours"
+        "api/user/search",
+        "api/user/by-id",
+        "api/user/by-username",
+        "api/user/projects",
+        "api/user/deletedProjects",
+        "api/user/anon",
+        "api/user/hours"
       ]
     },
     {
       "group": "Collection endpoints",
       "pages": [
-        "api-reference/collection/get",
-        "api-reference/collection/new"
+        "api/collection/get",
+        "api/collection/new"
       ]
     },
     {
       "group": "Editor endpoints",
       "pages": [
-        "api-reference/editor/logs",
-        "api-reference/editor/terminal",
-        "api-reference/editor/add-domain",
-        "api-reference/editor/remove-domain",
-        "api-reference/editor/list-domain",
-        "api-reference/editor/add-member",
-        "api-reference/editor/remove-member"
+        "api/editor/logs",
+        "api/editor/terminal",
+        "api/editor/add-domain",
+        "api/editor/remove-domain",
+        "api/editor/list-domain",
+        "api/editor/add-member",
+        "api/editor/remove-member"
       ]
     }
   ]
